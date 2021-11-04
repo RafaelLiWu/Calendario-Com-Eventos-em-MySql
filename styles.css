@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+.Calendario{
+    width: 350px;
+    border: 1px solid cyan;
+    height: 387px;
+}
+.dias{
+    display: flex;
+    width: 350px;
+    flex-wrap: wrap;
+}
+.diasblock{
+    width: 50px ;
+    height: 50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+.diasnumber{
+    width: 50px ;
+    height: 50px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+.diasnumber:hover{
+    background-color: aqua;
+}
+.mesatual{
+    width: 350px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new {
+    justify-content: space-between;
+    padding: 4px 10px 4px 10px;
+}
+
+.mesanterior, .mesposterior{
+    border: 1px solid aqua;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+.mesanterior:hover, .mesposterior:hover{
+    background-color: aqua;
+}
+
+.lembrete::after{
+    content: "";
+    width: 20px;
+    position: absolute;
+    height: 3px;
+    background-color: rgb(116, 194, 240);
+    bottom: 10;
+}
+
+.alerta{
+    position: absolute;
+    top: -120px;
+    width: 250px;
+    height: 120px;
+    display: flex;
+    background-color: rgb(77, 74, 74);
+    flex-direction: column;
+}
+.alerta div:nth-child(1){
+    padding: 7px 0px 7px 15px;
+    background-color: rgb(39, 32, 32);
+    color: white;
+}
+.alerta div:nth-child(2){
+    padding: 7px 0px 7px 15px;
+    background-color: rgb(85, 84, 84);
+    color: white;
+    flex: 1;
+    
+}
+.alerta div:nth-child(3){
+    padding: 3px 0px 3px 15px;
+    background-color: rgb(83, 83, 83);
+    color: white;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+form{
+    display: flex;
+
+    flex-direction: column;
+}
+.dividir{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
